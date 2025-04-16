@@ -1,0 +1,49 @@
+
+
+%---------------------------------------------
+
+
+\title[Nice Title]{Fancy and Elaborated Title}
+
+\author[A. Name]{First Author\inst{1} \and  Second Author\inst{2} \and Third Author\inst{3} }
+
+\institute[VFU]{\inst{1}%
+  Faculty of Physics\\
+  Very Famous University
+  \and
+  \inst{2}%
+  Faculty of Chemistry\\
+  Very Famous University 
+  \and
+  \inst{3}%
+  Faculty of Engineering\\
+  Another Very Famous University
+}
+
+
+\vspace{-2cm}\date{June 4, 2025}
+% Define positions for logos on title page
+\titlegraphic{
+  \begin{tikzpicture}[remember picture, overlay]
+    % 
+    \node[anchor=south west, xshift=0.5cm, yshift=0cm] at (current page.south west) {
+      \includegraphics[height=1.3cm]{logos/logo1.png}
+    };
+
+    % 
+    \node[anchor=south west, xshift=2.5cm, yshift=0cm] at (current page.south west) {
+      \includegraphics[height=0.9cm]{logos/logo3.png}
+    };
+    
+    % 
+    \node[anchor=north east, xshift=-0.8cm, yshift=-0.3cm] at (current page.north east) {
+      \includegraphics[height=1.1cm]{logos/logo2.png}
+    };
+    
+    %
+    \node[anchor=north east, xshift=-2.8cm, yshift=-0.3cm] at (current page.north east) {
+      \includegraphics[height=1.4cm]{logos/logo4.png}
+    };
+  \end{tikzpicture}
+}
+
