@@ -70,11 +70,10 @@ The `sample.tex` file showcases how to use the theme. Modify title, sections, lo
 
 ## ✨ Credits
 
-Designed and maintained by [Your Name].  
-Structure improved and documentation generated with assistance from ChatGPT.
+Designed and maintained by Jose P. Marchezi
 
 ---
 
 ## 📝 License
 
-Free for academic and non-commercial use. Attribution appreciated.
+Free for academic and non-commercial use.
