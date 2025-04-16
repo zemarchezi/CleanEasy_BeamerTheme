@@ -5,29 +5,6 @@ This theme separates style components into modular `.sty` files for flexibility 
 
 ---
 
-## 📁 Project Structure
-
-```
-CleanEasy_BeamerTheme/
-├── beamercolorthemeCleanEasy.sty        # Custom color definitions
-├── beamerfontthemeCleanEasy.sty         # Font settings
-├── beamerinnerthemeCleanEasy.sty        # Inner theme elements
-├── beamerthemeCleanEasy.sty             # Main theme file (includes the others)
-├── configs/
-│   ├── configs.tex                       # Global configurations (colors, layout options)
-│   └── title_page.tex                   # Modular title page setup
-├── logos/
-│   ├── logo1.png                        # Logos for customization
-│   ├── logo2.png
-│   ├── logo3.png
-│   └── logo4.png
-├── reference.bib                        # Sample bibliography file
-├── sample.tex                           # Demo presentation
-└── README.md
-```
-
----
-
 ## 🚀 How to Use
 
 1. Place all files in your working directory (or install to a local LaTeX path).
