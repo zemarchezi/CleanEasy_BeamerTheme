@@ -1,0 +1,116 @@
+%-------------------------------------------------------------
+%  Package: beamertheme-CleanEasy
+%  Author: Jose Paulo Marchezi (jpmarchezi@gmail.com)
+%  Version: 1.0, 2025-04-15
+%  Link: https://github.com/zemarchezi/CleanEasy_BeamerTheme
+%  This is free and unencumbered software released into the
+%  public domain; see <http://unlicense.org> for details.
+%-------------------------------------------------------------
+
+%--------------------------------------
+%  Outer Theme Settings
+%--------------------------------------
+
+% Frame numbering
+\setbeamertemplate{page number in head/foot}[totalframenumber]
+
+% Navigation symbols (disabled)
+\setbeamertemplate{navigation symbols}{}
+
+
+% Standard footline
+\defbeamertemplate*{footline}{CleanEasy theme}{%
+  \leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=.2\paperwidth,ht=2.25ex,dp=1ex,left]{author in head/foot}%
+      \usebeamerfont{author in head/foot}\hspace*{3ex}\textcolor{fg!30}{\insertshortauthor} \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.65\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+      \usebeamerfont{title in head/foot}\textcolor{fg!30}{\insertshorttitle}
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.15\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
+      \usebeamerfont{date in head/foot}\textcolor{fg!30}{\insertshortdate{}\hspace*{2ex} \insertframenumber{}/\inserttotalframenumber}\hspace*{2ex}
+    \end{beamercolorbox}}%
+  \vskip0pt%
+}
+
+% Empty footline for title and plain pages
+\defbeamertemplate{footline}{empty}{}
+
+
+% Header with logo support (optional)
+\defbeamertemplate*{headline}{CleanEasy theme}{%
+  % Empty by default
+  % Uncomment and modify the following to add a header
+  %\begin{beamercolorbox}[wd=\paperwidth,ht=0.12\paperheight,dp=1ex]{title in head/foot}
+  %  \vbox to 0.12\paperheight{\vfil\inserttitlenavigationhorizontal{\paperwidth}{}{}\vfil}
+  %\end{beamercolorbox}
+}
+
+% Section page
+\defbeamertemplate*{section page}{CleanEasy theme}{%
+  \begin{centering}
+    \begin{beamercolorbox}[sep=12pt,center]{part title}
+      \usebeamerfont{section title}\insertsection\par
+    \end{beamercolorbox}
+  \end{centering}
+}
+
+% Sidebar navigation (disabled by default)
+\setbeamertemplate{sidebar left}{}
+\setbeamertemplate{sidebar right}{}
+
+% Background (can be customized)
+\setbeamertemplate{background canvas}[default]
+
+% Add optional logo in the top-right corner of each slide
+% Uncomment and modify to add a logo to all slides
+% \addtobeamertemplate{frametitle}{}{%
+%  \begin{tikzpicture}[remember picture,overlay]
+%    \node[anchor=north east,yshift=-5pt,xshift=-5pt] at (current page.north east) {
+%      \includegraphics[height=0.8cm]{logos/logo_small.png}
+%    };
+%  \end{tikzpicture}
+% }
+
+
+% Special handling for title page
+\AtBeginDocument{%
+  \setbeamertemplate{footline}[CleanEasy theme]
+  
+  % Use empty footline for title page and TOC
+  \BeforeBeginEnvironment{frame}{%
+    \setbeamertemplate{footline}[CleanEasy theme]%
+  }
+  
+  \apptocmd{\maketitle}{%
+    \setbeamertemplate{footline}[empty]%
+  }{}{}
+  
+  \apptocmd{\tableofcontents}{%
+    \setbeamertemplate{footline}[empty]%
+  }{}{}
+}
+
+\AtBeginSection[]
+{
+  \begin{frame}[plain]
+    \begin{tikzpicture}[remember picture,overlay]
+      % Fundo limpo
+      \fill[MediumBlue!5] (current page.north west) rectangle (current page.south east);
+      
+      % Título da seção
+      \node[
+        anchor=west, 
+        text width=0.6\paperwidth, 
+        align=left, 
+        font=\Large\bfseries
+      ] at ([xshift=-2cm]current page.center) {
+        \insertsectionhead
+      };
+      
+      % Linha horizontal
+      \draw[thick, DarkBlue!40] 
+        ([xshift=-2cm, yshift=-1cm]current page.center) -- ++(\paperwidth/2,0);
+    \end{tikzpicture}
+  \end{frame}
+}

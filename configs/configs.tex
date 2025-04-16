@@ -1,55 +1,18 @@
 
-% if you want to include break lines in the titlepage arguments
-\pdfstringdefDisableCommands{%
-  \def\\{}%
-  \def\texttt#1{<#1>}%
-}
-
-% configure the footnote fot presentation slides, excluding the title page
-\newif\ifspecialpage
-\specialpagefalse
-\addtobeamertemplate{title page}{\specialpagetrue}{\specialpagefalse}
 
 
-% The footline The default is the short author, shortitle, date and pages. You can change it by adding the text you want in those placeholders.
-\setbeamertemplate{footline}{
-    \leavevmode%
-    \hbox{%
-        \begin{beamercolorbox}[wd=.2\paperwidth,ht=2.25ex,dp=1ex,left]{title in head/foot}%
-            \usebeamerfont{title in head/foot}\hspace*{3ex}\textcolor{fg!30}{\insertshortauthor}
-        \end{beamercolorbox}%
-        \begin{beamercolorbox}[wd=.65\paperwidth,ht=1.25ex,dp=1ex,center]{title in head/foot}%
-            \usebeamerfont{title in head/foot}\hspace*{-5ex}\textcolor{fg!30}{\insertshorttitle}
-        \end{beamercolorbox}%
-        \begin{beamercolorbox}[wd=.15\paperwidth,ht=1.25ex,dp=1ex,right]{date in head/foot}%
-            \usebeamerfont{date in head/foot}\hspace*{-4ex}\textcolor{fg!30}{\insertshortdate{}\hspace*{3ex}
-            \insertframenumber{} / \inserttotalframenumber\hspace*{2ex}}
-        \end{beamercolorbox}}%
-    \vskip0pt\hfill%
-}
-
-% Create the section page
-
-\AtBeginSection[]
-{
-  \begin{frame}[plain]
-    \begin{tikzpicture}[remember picture,overlay]
-      % Fundo limpo
-      \fill[MediumBlue!5] (current page.north west) rectangle (current page.south east);
-      
-      % Título da seção
-      \node[
-        anchor=west, 
-        text width=0.6\paperwidth, 
-        align=left, 
-        font=\Large\bfseries
-      ] at ([xshift=-2cm]current page.center) {
-        \insertsectionhead
-      };
-      
-      % Linha horizontal
-      \draw[thick, DarkBlue!40] 
-        ([xshift=-2cm, yshift=-1cm]current page.center) -- ++(\paperwidth/2,0);
-    \end{tikzpicture}
-  \end{frame}
+% Configure code listings
+\lstset{
+  basicstyle=\ttfamily\small,
+  keywordstyle=\color{blue},
+  commentstyle=\color{green!60!black},
+  stringstyle=\color{red},
+  showstringspaces=false,
+  breaklines=true,
+  frame=single,
+  rulecolor=\color{black!30},
+  backgroundcolor=\color{black!5},
+  numbers=left,
+  numberstyle=\tiny\color{black!70},
+  numbersep=5pt
 }
