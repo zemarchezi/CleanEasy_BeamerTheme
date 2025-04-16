@@ -5,7 +5,7 @@ This theme separates style components into modular `.sty` files for flexibility 
 
 ---
 
-## �� Project Structure
+## 📁 Project Structure
 
 ```
 CleanEasy_BeamerTheme/
@@ -28,7 +28,7 @@ CleanEasy_BeamerTheme/
 
 ---
 
-## �� How to Use
+## 🚀 How to Use
 
 1. Place all files in your working directory (or install to a local LaTeX path).
 2. In your LaTeX document, load the theme with:
@@ -53,16 +53,16 @@ pdflatex sample.tex
 
 ---
 
-## �� Features
+## 💡 Features
 
 - ✅ Clean design suitable for scientific and professional presentations
-- �� Separated color/font definitions for easy customization
-- �� Modular components (title page, configuration settings)
-- ��️ Ready-to-use logos
+- 🎨 Separated color/font definitions for easy customization
+- 🔌 Modular components (title page, configuration settings)
+- 🖼️ Ready-to-use logos
 
 ---
 
-## �� Demo
+## 📚 Demo
 
 The `sample.tex` file showcases how to use the theme. Modify title, sections, logos, and colors as needed.
 
@@ -74,6 +74,7 @@ Designed and maintained by [Your Name].
 Structure improved and documentation generated with assistance from ChatGPT.
 
 ---
-## License
 
-This project is released under the **Unlicense License**, granting you complete freedom to use, modify, and distribute the template. For more details, see the [LICENSE](./LICENSE) file.
+## 📝 License
+
+Free for academic and non-commercial use. Attribution appreciated.
