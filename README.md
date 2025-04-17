@@ -25,7 +25,7 @@ This theme separates style components into modular `.sty` files for flexibility 
 4. Compile with `pdflatex` or `latexmk`:
 
 ```bash
-pdflatex sample.tex
+pdflatex CleanEasy.tex
 ```
 
 ---
