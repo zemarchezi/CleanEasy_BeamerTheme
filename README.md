@@ -53,11 +53,4 @@ Designed and maintained by Jose P. Marchezi
 
 ## 📝 License
 
-This is free and unencumbered software released into the public domain.
-
-Anyone is free to copy, modify, publish, use, compile, sell, or
-distribute this software, either in source code form or as a compiled
-binary, for any purpose, commercial or non-commercial, and by any
-means.
-
-For more information, please refer to <https://unlicense.org>
+This project is released under **the Unlicense License**, granting you complete freedom to use, modify, and distribute the template. For more details, see the [LICENSE](LICENSE) file.
