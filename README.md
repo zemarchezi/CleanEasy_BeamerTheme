@@ -4,7 +4,7 @@ A clean and minimalist Beamer theme designed for professional and academic prese
 This theme separates style components into modular `.sty` files for flexibility and clarity.
 
 -   CTAN: https://ctan.org/pkg/beamertheme-cleaneasy
--   Overleaf: https://www.overleaf.com/latex/templates/CleanEasy_BeamerTheme
+-   Overleaf: https://www.overleaf.com/latex/templates/cleaneasy-beamertheme/vbgkwkfycpcq
 -   Github: https://github.com/zemarchezi/CleanEasy_BeamerTheme
 
 ---
